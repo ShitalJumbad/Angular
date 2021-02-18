@@ -31,6 +31,32 @@
               styleUrls: ['./app.component.css']
             })
   
-13.
+13. Services allow you to define business logic in a seperate file and then inject whaterver service we need whenver we need it
+14. Injectable decorator is required when you inject a service (injecting a service means you have constructor that injects a service)
+15. To let our appp know trhat this service exists we need to register it n or app.module (add it as a provider)
+16. It's really not a good idea to put potentially long running things in our constructor 
+17. Compoonents have lifecycle hooks that you can hook into e.g ngOnInitmethod()
+
+18. Routing
+    In the traditional websites before the advent of single page apps, each page was completely seprate and distinct from others. And every page was served independtly from the server. When you went to index.html, the browser would ask the server for the index.html file. Which the server would then return to the browser and then display. And then if you go foo.html. It would ask server for that file and then file would returnrd and then displayed. Enire page will be replaced even the 60% of the page was the same as the prior page.
+    
+    Modern web applications however load an app into the memory by loading just a single page, typically index.html, and all other pages are loaded by javascript but they are not really full pages. YOur intial index.html is the only full page load. And then only portions are replaced as you nevigate from page to page around the site. To the user it seeems like new page is being loaded they even see the URL changing in their browser and the back and forward buttons even work despite the fact that only one index,html page has ever actually been loaded from the server. There a lot that goes into making this work, but frameworks like angular have abstracted a lot of that away and made it very simple.
+    
+19. Observable
+    Observables are like are streams of data.They are kind of like arrays where data arrives over time.
+    e.g Subject is observable
+    setTimeout(
+    () => {
+    subject.next(EVENTS); // here we are adding data to our observable stream, we are doing it inside of setTimeout to simulate asynchrony
+    subject.complete(); 
+    }, 100 // after 100 ms we will add data to the stream
+    )
+    
+    this.eventService.getEvents().subscribe( events => { this.events = events}) //this will get set only when data is received. Which happens inside our subscription
+    
+20. You can add new feature module to your application and lazily load them
+    
+    
+
     
   
