@@ -22,7 +22,7 @@ Angular applications are grouped into modules and every angular application has 
 
 index.html file is loaded in our browser and and it loads our app.component
 
-Webpack needs to know which files to bundle up when it builds the app. You cant cant statically access any file that is relative to index.html you'll have to setup a path in angular.json e.g "assets": [ "src/favicon.ico", "src/assets" ], That's why we were able to do this in app.componets.ts file adding image from assets folder @Component({ selector: 'app-root', template: <h2>Hello world</h2> <img src="/assets/images/basic-shield.png"/>, styleUrls: ['./app.component.css'] })
+Webpack needs to know which files to bundle up when it builds the app. You cant cant statically access any file that is relative to index.html you'll have to setup a path in angular.json e.g "assets": [ "src/favicon.ico", "src/assets" ], That's why we were able to do this in app.componets.ts file adding image from assets folder @Component({ selector: 'app-root', template: < h2>Hello world< /h2> <img src="/assets/images/basic-shield.png"/>, styleUrls: ['./app.component.css'] })
 
 Services allow you to define business logic in a seperate file and then inject whaterver service we need whenver we need it
 
