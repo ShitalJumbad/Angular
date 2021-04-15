@@ -1,0 +1,4 @@
+1. What is tree Shaking
+       Tree shaking is a term commonly used in the JavaScript context for dead-code elimination. It relies on the static structure of ES2015 module syntax, i.e. import and export
+       
+2. Shita
